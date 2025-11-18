@@ -1,6 +1,6 @@
 # Language Token Analysis & Prompt Compression — README 📚✨
 
-##TL;DR
+## TL;DR
 ### Part 1
 English is king when it comes to prompting LLMs, other languages tend to use more tokens (even if they have fewer words/character). This is because most popular tokenizers are trained primarily on majority-English data, but it would be interesting to test with tokenizers that are specifically suited to those languages.
 ### Part 2
