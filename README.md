@@ -11,10 +11,10 @@ Note: In order to use the code as-is, you must define `GOOGLE_APPLICATION_CREDEN
 ## Overview 🌍
 This project explores how different languages are tokenized by modern LLM tokenizers and investigates whether English prompts can be compressed without significantly altering their semantic meaning. The notebook includes:
 
-- Cross-language translation tests 🌐  
-- Tokenization comparisons across models (OpenAI, DeepSeek, Hugging Face) 🤖  
-- Embedding-based semantic similarity measurements 📏  
-- Preliminary analysis of “prompt compression” — reducing token count while preserving meaning 📝  
+- Cross-language translation tests
+- Tokenization comparisons across models (OpenAI, DeepSeek, Hugging Face)
+- Embedding-based semantic similarity measurements
+- Preliminary analysis of “prompt compression” — reducing token count while preserving meaning
 
 **Goal:** Understand which techniques can be used to meaningfully reduce token usage and costs. The two techniques that are explored are 1) Using foreign languages, and 2) Removing extraneous articles and punctuation from English prompts.
 
@@ -26,21 +26,21 @@ This project explores how different languages are tokenized by modern LLM tokeni
 - Translates English sentences into other languages using the Google Translate API  
 - Tokenizes both versions with multiple tokenizers  
 - Calculates:
-  - Token counts 🔢  
-  - Token usage ratios 📊  
+  - Token counts
+  - Token usage ratios
   - Patterns that show which languages compress or expand relative to English  
 
 ### 2. Prompt Compression Experiment
-- Removes low-information English elements ✂️  
-- Computes token savings 💰  
+- Removes low-information English elements
+- Computes token savings
 - Uses embedding cosine similarity to estimate semantic loss  
 - Produces:
-  - Average information loss (~3–5%) ⚖️  
-  - Average token savings (~20–25%) 💸  
+  - Average information loss (~3–5%)
+  - Average token savings (~20–25%)
 
 ### 3. Visualization Tools
 The notebook generates helpful plots, including:  
-- Token count bar charts 📈  
+- Token count bar charts
 - Token ratio summaries  
 - Embedding-loss visualizations  
 
@@ -80,8 +80,8 @@ Most widely-used tokenizers (OpenAI, DeepSeek, Hugging Face’s GPT-style tokeni
 
 ## Results (Summary) 📊
 - English often tokenizes more efficiently than many other languages because common English patterns map to single tokens  
-- Removing articles/punctuation reduces English sentence length without meaningfully affecting semantic structure (depending on your threshold) ✂️  
-- Token savings of ~20% appear feasible with minimal semantic degradation (information loss of ~3-5%) 💰
+- Removing articles/punctuation reduces English sentence length without meaningfully affecting semantic structure (depending on your threshold)
+- Token savings of ~20% appear feasible with minimal semantic degradation (information loss of ~3-5%)
 
 This motivates further exploration of automated prompt compression.
 
@@ -89,13 +89,13 @@ This motivates further exploration of automated prompt compression.
 
 ## Future Work 🚀
 - Fine-tune a model to automatically compress prompts while minimizing embedding-loss  
-- Explore multilingual tokenizers (e.g., Jieba for Chinese) 🌏  
+- Explore multilingual tokenizers (e.g., Jieba for Chinese)
 - Experiment with algorithmic compression techniques such as PCA on sentence embeddings  
-- Build a production-ready "prompt optimizer" API  🤔 (if I feel like it)
+- Build a production-ready "prompt optimizer" API (if I feel like it)
 
 ---
 
-## How to Use 🖥️
+## How to Use
 1. Open the notebook in Google Colab  
 2. Insert your Google Cloud Translate API key  
 3. Run the cells in order  
@@ -104,7 +104,7 @@ This motivates further exploration of automated prompt compression.
 
 ---
 
-## Requirements ⚙️
+## Requirements
 - Python 3.12.12  
 - Google Colab  
 
